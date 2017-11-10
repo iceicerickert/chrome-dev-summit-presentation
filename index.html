@@ -4,11 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>CDS2017</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
-
+		<link rel="stylesheet" href="css/custom.css">
+		
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -24,8 +25,162 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-background-video="/assets/1_introvideo.mp4" data-background-video-loop data-background-video-muted>
+				</section>
+				<section>
+					<h3>Next 20 minutes</h3>
+					<ul>
+						<li>Struggles on the web</li>
+						<li>What is a Progressive Web App?</li>
+						<li>Learnings</li>
+						<li>Showcases</li>
+						<li>Webteam Focus</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<p><b style="font-size: 120%;">53%</b> of users abandon sites that take longer than 3 seconds to load</p>
+					</section>
+					<section>
+						<p><b style="font-size: 120%;">19 seconds</b> average mobile web page load on 3G</p>
+					</section>
+					<section>
+						<p><b style="font-size: 120%;">60%</b> of mobile connections world-wide are <b style="font-size: 120%;">2G</b></p>
+					</section>
+					<section>
+						<p><b style="font-size: 120%;">33%</b> of of smartphone users in India run out of <b style="font-size: 120%;">storage</b> space every day</p>
+					</section>
+
+					<section>
+						<img data-src="/assets/web-growth.png">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>What is a PWA?</h3>
+						<q>"Progressive Web Apps are user experiences that have the reach of the web and are Reliable, Fast & Engaging."</q>
+					</section>
+					<section>
+						<h3>Reliable</h3>
+						<p>Load instantly and never show the downasaur, even in uncertain network conditions.</p>
+						<img class="opaque" width="50%" data-src="/assets/pwa-reliable.png">
+					</section>
+					<section>
+						<h3>Fast</h3>
+						<p>Respond quickly to user interactions with silky smooth animations and no janky scrolling.</p>
+						<img class="opaque" width="50%" data-src="/assets/pwa-fast.png">
+					</section>
+					<section>
+						<h3>Engaging</h3>
+						<p>Feel like a natural app on the device, with an immersive user experience.</p>
+						<img class="opaque" width="50%" data-src="/assets/pwa-engaging.png">
+					</section>
+				</section>
+				<section>
+					<section><img data-src="/assets/sw-support.png"></section>
+					<section><img data-src="/assets/sw-development.png"></section>
+					<section>
+						<p>PWA in Windows Store!</p>
+					</section>
+				</section>
+				<section>
+					<h3>New Browser Features</h3>
+					<p>Download when offline</p>
+					<p>Background Sync API</p>
+					<p>Image Upload API</p>
+					<p>Web Share API</p>
+					<p>Payment Request API</p>
+					<p>Media Session API</p>
+					<p>Rich Push Messages</p>
+				</section>
+				<section>
+					<section>
+						<h3>Custom Tabs</h3>
+						<img data-src="/assets/webview-custom-tab.png">
+					</section>
+					<section>
+						<h3>Trusted Web Activity</h3>
+						<img data-src="/assets/webview-trusted-app-activity.png">
+					</section>
+				</section>
+				<section>
+					<img width="30%" data-src="/assets/puppeteer.png">
+					<pre><code data-trim data-noescape>
+						const browser = await puppeteer.launch();
+
+						const page = await browser.newPage();
+						await paga.goto('https://igapromotion.ca');
+
+						await page.screenshot({path: 'screenshot.png'});
+
+						await browser.close();
+					</code></pre>
+				</section>
+				<section>
+					<h3>Chrome User Experience Report</h3>
+					<ul>
+						<p>First Contentful Paint</p>
+						<p>Loaded</p>
+						<p>Effective Connection Type</p>
+						<p>Device Type</p>
+						<p><q>Available on BigQuery</q></p>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<img width="30%" data-src="/assets/uber-app.png">
+					</section>
+					<section>
+						<img width="30%" data-src="/assets/uber-logo.jpg">
+							<p><b>3s</b> interactive <b>2G</b></p>
+							<p><b>50kb</b> Core app</p>
+							<p>Designed to work well on non-steady networks</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<img width="30%" data-src="/assets/ola-logo.jpg">
+						<p><b>100 MB</b> iOS app</p>
+						<p><b>60 MB</b> Android app</p>
+						<p><b>200 KB</b> PWA</p>
+					</section>
+					<section>
+						<img width="100%" data-src="/assets/ola-cabs-screenshot.png">
+					</section>
+					<section>
+						<a href="https://book.olacabs.com/" target="_new">Demo</a>
+					</section>
+				</section>
+				<section>
+					<section>
+						<img class="opaque" width="50%" data-src="/assets/trivago.png">
+						<p style="font-size: 90%;"><b>150%</b> increase in engagement for Add to Home Screen users</p>
+						<p style="font-size: 90%;"><b>97%</b> overall increase in conversion</p>
+					</section>
+					<section>
+						<a href="https://www.trivago.nl/" target="_new">Demo</a>
+					</section>
+				</section>
+				<section>
+					<h3>Webteam Focus</h3>
+					<ol>
+						<li>Web Architecture</li>
+						<li>PWA + Polymer 2.x/3.0</li>
+						<li>Data Store with Redux</li>
+						<li>Lazy loading with app-route</li>
+						<li>Optimized PWA Web Server with prpl-server-node</li>
+						<li>Rethink web deployment</li>
+						<li>Quality (Code Coverage, Sonar, LightHouse, Filesize)</li>
+					</ol>
+				</section>
+				<section>
+					<section>
+						<p style="font-size: 200%;">❓</p>
+					</section>
+					<section>
+						<p style="font-size: 200%;">🍺🍺🍺🍺🍺🍺</p>
+					</section>
+				</section>
 			</div>
 		</div>
 
@@ -42,7 +197,18 @@
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
+				],
+				// Parallax background image
+				parallaxBackgroundImage: '/assets/panorama.jpg', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+				// Parallax background size
+				parallaxBackgroundSize: '5400px 1276px', // CSS syntax, e.g. "2100px 900px"
+
+				// Number of pixels to move the parallax background per slide
+				// - Calculated automatically unless specified
+				// - Set to 0 to disable movement along an axis
+				parallaxBackgroundHorizontal: 200,
+				parallaxBackgroundVertical: 50
 			});
 		</script>
 	</body>

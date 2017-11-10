@@ -1,0 +1,16 @@
+.reveal section img {
+    border: none;
+    background: none;
+}
+
+.reveal section img.opaque {
+    box-shadow: none;
+}
+
+h3,p,q,li,a {
+    text-shadow: 6px 3px 14px rgba(0, 0, 0, 0.7) !important;
+}
+
+a {
+    font-size: 70px !important;
+}
