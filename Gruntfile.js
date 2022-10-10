@@ -34,22 +34,31 @@ module.exports = function(grunt) {
 		},
 
 		sass: {
-			core: {
-				files: {
-					'css/reveal.css': 'css/reveal.scss',
-				}
-			},
-			themes: {
-				files: [
-					{
-						expand: true,
-						cwd: 'css/theme/source',
-						src: ['*.sass', '*.scss'],
-						dest: 'css/theme',
-						ext: '.css'
+			dist: {
+				options: {
+					implementation: 'sass',
+					// outputStyle: 'expanded',
+					sourceMap: true,
+					quiet: true // stop depreciation errors
+				},
+				core: {
+					files: {
+						'css/reveal.css': 'css/reveal.scss',
 					}
-				]
+				},
+				themes: {
+					files: [
+						{
+							expand: true,
+							cwd: 'css/theme/source',
+							src: ['*.sass', '*.scss'],
+							dest: 'css/theme',
+							ext: '.css'
+						}
+					]
+				}
 			}
+			
 		},
 
 		autoprefixer: {
